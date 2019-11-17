@@ -1,0 +1,18 @@
+Code Repository:Github
+Containers Platform:Docker
+Docker Repository: AWS - ECR
+CICD:Jenkins
+
+Step1: I Setuped 1 EKS Cluster though Cloudformation Script  in AWS Account
+Step2: Setup Jenknins Server in AWS.
+Step 3: Created jenkins job and the jenkinsfile in our github repository
+Step 4: Plugins used in Jenkins
+1.Kubernetes delievery Plugin
+2.Github
+Step 5:
+Jenkins File Contain:
+1.Run the job in jenkins ,it will run the job and Build the Docker image.
+2.After Building Docker  image it wil, upload the Docker image To amazon ECR Repositoy
+3.I created the yml file in github repository in which ,i am creating Services and Deployment in i am refering that docker iimage in image Category.
+4.Through the pipeline it deploy the code to k8 cluster and also create 1 loadbalancer .
+5.Hit that Load Balancer in URL u will get the Output.
